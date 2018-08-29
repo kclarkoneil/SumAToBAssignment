@@ -20,6 +20,18 @@ import Foundation
 
 struct Sums {
   func sum(from fromN: Int, to toN: Int) -> Int {
-    return -1
+    if (fromN <= toN) {
+    var sumTotal: Int
+    if (fromN == toN){
+      return fromN
+    }
+    else {
+      sumTotal = fromN + sum(from: fromN + 1, to: toN)
+      return sumTotal
+      }
+    }
+  else {
+  return 0
   }
+}
 }
